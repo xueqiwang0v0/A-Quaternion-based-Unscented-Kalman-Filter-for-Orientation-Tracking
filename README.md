@@ -18,7 +18,6 @@ truth” estimate from the Vicon.
 
 ## Instructions and Tips
 1. You will find a set of IMU data and another set of data that gives the corresponding tracking information from the Vicon motion capture system. Download these files and be sure you can load and interpret the file formats.* The files are given as ‘.mat’ files. Make sure you can load these into python first. (Hint - scipy.io.loadmat - but note that this is the only purpose you may use scipy for.)
-1
 2. This will return a dictionary form. Please disregard the following keys and corresponding values: ’version’, ‘header’, ‘global’. The keys, ‘cams’, ‘vals’, ‘rots’, and ‘ts’ are the main data you need to use.
 3. Note that the biases and scale factors of the IMU sensors are unknown, as well as the registration between the IMU coordinate system and the Vicon global coordinate system. You will have to figure them out.
 4. You will write a function that computes orientation only based on gyro data, and another function that computes orientation only based on accelerometer data. You should check that each function works well before you try to integrate them into a single filter. This is important!
